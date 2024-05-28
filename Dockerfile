@@ -1,8 +1,8 @@
 FROM alpine
 
-LABEL MAINTAINER "ZhangSean <zxf2342@qq.com>"
+LABEL MAINTAINER "DFJ <info@developerfromjokela.com>"
 
-ENV FRP_VERSION=v0.44.0
+ENV FRP_VERSION=v0.58.0
 
 ADD entrypoint.sh /entrypoint.sh
 
@@ -19,7 +19,5 @@ RUN addgroup -S frp \
 USER frp
 
 WORKDIR /frp
-
-EXPOSE 6000 7000
 
 CMD ["/frp/entrypoint.sh"]
